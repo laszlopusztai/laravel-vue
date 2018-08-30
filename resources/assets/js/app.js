@@ -15,9 +15,16 @@ window.Vue = require('vue');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('tabs', require('./components/tabs.vue'));
-Vue.component('tab', require('./components/tab.vue'));
+Vue.component('coupon', require('./components/Coupon.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+        couponApplied: false,
+    },
+    methods: {
+        onCouponApplied() {
+            this.couponApplied = true;
+        }
+    },
 });
